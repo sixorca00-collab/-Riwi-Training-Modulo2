@@ -1,5 +1,5 @@
 const Bienvenido = "Bienvenido a nuestra pagina."
-//alert()
+alert(Bienvenido)
 const btn = document.getElementById("btn");
 const contacto = document.getElementById("contacto");
 
