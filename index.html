@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio</title>
+
+    <!-- Vinculamos el archivo CSS externo -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <!-- HEADER: incluye el nombre y el menú -->
+    <header>
+        <nav class="navbar">
+            <img src="../portafolio/img/cdf3726a-cb47-4b50-8a5e-c33dcfee1ece.jpeg" alt="Foto-personal">
+            <h1>Juan Olarte</h1>
+            <!-- Menú de navegación -->
+            <ul>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+
+                <!-- Enlace a la página secundaria -->
+                <li><a href="mascotas.html">Mis mascotas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección SOBRE MÍ -->
+    <section id="sobre-mi" class="sobre-mi">
+        <h2>Sobre mí</h2>
+        <!-- Descripción personal -->
+        <p>
+        Soy una persona simple que disfruta de las cosas cotidianas: comer bien, ver series y mantener una rutina activa. Me gusta el trabajo físico y encuentro gran satisfacción en ser productivo y consciente de cómo utilizo mi tiempo. Practico boxeo, lo que me ha ayudado a fortalecer la disciplina, la constancia y el autocontrol, tanto dentro como fuera del entrenamiento.
+
+Disfruto realizar actividades productivas como leer, meditar y cocinar, ya que me permiten mantener el equilibrio entre mente y cuerpo. Me gusta aprender constantemente y disfruto de mi trabajo mientras lo realizo, poniendo atención en el proceso y no solo en el resultado. Me considero una persona proactiva, con una actitud positiva frente a los retos, y entre mis principales habilidades destaco el optimismo, el liderazgo, la lealtad, el esfuerzo y la paciencia. 
+        </p>
+    </section>
+
+    <!-- Sección PROYECTOS -->
+    <section id="proyectos" class="proyectos">
+        <h2>Proyectos</h2>
+    <!--Actualizo la seccion para que pueda quedar en tipo columnas-->
+    <div class="proyecto-card"> <h3>Proyectos de pyhton</h3>
+        <img src="../portafolio/img/py.png" alt="Py">
+        <a href="https://github.com/sixorca00-collab/Riwi-training-">--Repo en Git con los contenidos--</a>
+    </div>
+    <div class="proyecto-card"> <h3>Proyectos de html con css</h3>
+        <img src="../portafolio/img/ht.png" alt="Html-css">
+        <a href="https://github.com/sixorca00-collab/Riwi-Training-Modulo2-">--Repo en Git con los contenidos--</a>
+    </div>
+    <div class="proyecto-card"> <h3>Proyectos de JS</h3>
+        <img src="../portafolio/img/js.png" alt="JS">
+        <a href="">--Repo en Git con los contenidos--</a>
+    </div>        
+        
+    </section>
+
+    <!-- Sección CONTACTO -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <!-- Formulario básico de contacto -->
+        <form>
+            <!-- Campo de nombre -->
+            <label>Nombre:</label><br>
+            <input type="text" placeholder="Escribe tu nombre"><br><br>
+
+            <!-- Campo de correo -->
+            <label>Correo:</label><br>
+            <input type="email" placeholder="Escribe tu correo"><br>
+            <br>
+
+            <!-- Botón de envío -->
+            <button type="submit">Enviar</button>
+        </form>
+        <button id = "btn" class="noche"> <img src="../portafolio/img/moon.png" alt="Luna"></button>
+    </section>
+<script src="script.js"></script>
+</body>
+</html>

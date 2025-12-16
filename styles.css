@@ -1,0 +1,456 @@
+/* =========================================================
+   ESTILOS GENERALES PARA TODA LA WEB
+   ========================================================= */
+
+/* Estilo general del body: fondo, fuente y margen reset */
+body {
+    background-color: gray;       /* Fondo gris para toda la página */
+    margin: 0;                    /* Quitamos márgenes por defecto */
+    font-family: Arial, sans-serif; /* Tipografía legible */
+}
+/* =========================================================
+   ESTILOS DEL HEADER Y DEL MENÚ DE NAVEGACIÓN
+   ========================================================= */
+
+/* Contenedor superior con el título y el menú */
+header {
+    background-color: #222;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Nav más controlado */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+/* Logo no rompe layout */
+header img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+header img:hover{
+    box-shadow: 2px  2px 2px 2px #ff0000;
+    transform:  translateY(-5px) scale(1.2);
+}
+
+.navbar{
+    list-style: none; /*quita las viñetas*/
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+.navbar li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background-color: #ce5bc883 ;
+    font-weight: 500;
+    display: inline-block;
+    transition: transform 0.5s ease;
+ 
+}
+.navbar li a:hover {
+    background-color: #555;
+    transform: translateY(-2px) scale(1.3); 
+    transition: all 0.3s ease;
+}
+nav ul{
+    display: flex;
+}
+nav li{
+    display: inline-block;
+}
+/*Secciones y texto*/
+p{
+    color:  black;
+    font-size: 20px;
+    font-family: fantasy;
+}
+label{
+        color:  black;
+    font-size: 20px;
+    font-family: fantasy;
+}
+/* Título principal del header */
+h1 {
+    margin: 0;                   /* Quita espacio extra */
+    color: blueviolet;           /* Color definido por ti */
+    font-size: 30px;             /* Tamaño del texto */
+}
+
+
+
+/* =========================================================
+   ESTILOS DE ENLACES (MENU Y GENERALES)
+   ========================================================= */
+
+a {
+    text-decoration: none;       /* Quitamos el subrayado */
+    color: rgb(36, 218, 202);                /* Color blanco para contraste */
+    margin-left: 15px;           /* Espopio entre enlaces */
+    font-weight: bold;           /* Se ven más definidos */
+    transition: color 0.3s;      /* Transición suave */
+}
+
+/* Hover: cambio de color cuando se pasa el mouse */
+a:hover {
+    color: blueviolet;           /* Combina con tu h1 */
+}
+
+
+
+/* =========================================================
+   SECCIONES DEL PORTAFOLIO (index.html)
+   ========================================================= */
+
+section {
+    width: 80%;                  /* Ancho manejable */
+    margin: 30px auto;           /* Centrado vertical y horizontal */
+    padding: 20px;               /* Espaciado interno */
+    background-color: #ce5bc883;   /* Fondo claro */
+    border-radius: 10px;         /* Bordes redondeados */
+    box-shadow: 3px 5px 15px rgba(104, 4, 124, 0.671); /* Sombra suave */
+}
+
+section h2 {  
+    text-align: center;
+    color: #111;       /* Mantener estilo global */
+}
+
+
+
+/* =========================================================
+   LISTA DE PROYECTOS
+   ========================================================= */
+    .proyectos{
+        grid-template-columns: repeat(3,1fr);
+        display: grid;
+        gap: 10px;
+        width: 80%;
+        height: 80%;
+        
+
+    }
+    .proyectos h2 {
+  grid-column: 1 / -1; /* ocupa todas las columnas */
+  text-align: center;
+  color: #111;
+}
+    .proyecto-card h3{
+        text-align: center;
+    }
+
+   .proyecto-card{
+    width: 300px;
+    height: 280px;
+    background-color: #666;
+    padding: 1 auto;
+    box-shadow: 2px 6px 12px #05eeff;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: transform 0.5s ease;
+    border-radius: 2rem;
+}
+.proyecto-card:hover{
+    box-shadow: 6px 6px 6px  #0f0f0f;
+    transform: translateY(-5px) scale(1.09);
+    
+}
+.proyecto-card img{
+        height: 200px;
+        width: 200px;
+        margin: auto 45px;
+        padding: auto 45px;
+        margin-top: -20px;
+        
+}
+
+.proyecto-card a{
+    padding-top: 13px;
+    color: #a200ff;
+    background-color: beige;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 14px;
+    border-radius: 7px ;
+    text-align: center;
+}
+.proyecto-card a:hover{
+    color: #05eeff;    }
+
+
+/* =========================================================
+   FORMULARIO DE CONTACTO
+   
+   ========================================================= */
+form {
+    display: flex;               /* Ubicar inputs uno encima del otro */
+    flex-direction: column;      /* Vertical */
+    gap: 10px;                   /* Espacio entre elementos */
+    margin-top: 15px;
+}
+
+input, textarea {
+    padding: 10px;               /* Espaciado del texto */
+    border-radius: 5px;          /* Bordes redondeados */
+    border: 1px solid #666;      /* Borde gris */
+    font-size: 14px;
+    background-color: gray;
+    color: #111 !important;
+}
+input::placeholder, textarea::placeholder{
+    color: #111;
+    opacity: 1;
+}
+
+/* Botón del formulario */
+button {
+    padding: 10px;
+    background-color: blueviolet; /* Fondo del botón */
+    color: white;                  /* Texto blanco */
+    border: none;                  /* Sin borde */
+    border-radius: 5px;            /* Bordes redondeados */
+    cursor: pointer;               /* Manito */
+    transition: background 0.3s;   /* Animación */
+}
+
+button:hover {
+    background-color: rgb(85, 23, 143); /* Color más oscuro */
+}
+
+
+
+/* =========================================================
+   GALERÍA TIPO MOSAICO (mascotas.html)
+   ========================================================= */
+
+/* Contenedor de la galería: usa GRID para 3 columnas */
+.galeria-mascotas {
+    display: grid;                        /* Activamos rejilla */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 30px;                            /* Espacio entre cards */
+    padding: 20px;                        /* Espaciado interno */
+    box-shadow: 12px 12px 12px #00000083;
+}
+.galeria-mascotas h2{
+    grid-column: 1 / -1;
+}
+
+/* Card individual de cada mascota */
+.animal {
+    background-color: rgba(145, 63, 221, 0.555);  /* Tu color original */
+    border: 2px solid black;              /* Borde negro */
+    border-radius: 20px;                  /* Bordes suaves */
+    padding: 15px;                        /* Espaciado interno */
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3); /* Sombra card */
+    transition: transform 0.3s;           /* Animación hover */
+}
+
+/* Hover: la card crece un poco para destacar */
+.animal:hover {
+    transform: scale(1.03);              /* Crece 3% */
+    box-shadow: 6px 6px 6px #333;
+}
+
+/* Imagen dentro de cada card */
+.animal img {
+    width: 100%;                          /* Imagen ocupa todo el ancho */
+    height: auto;                         /* Mantiene proporciones */
+    border-radius: 15%;                   /* Bordes redondos */
+    border: 1px solid black;              /* Borde */
+    display: block;                       /* Evita espacios invisibles */
+}
+
+/* Descripción de la mascota */
+.animal article {
+    padding: 10px;                        /* Espaciado */
+    text-align: justify;                  /* Lectura más ordenada */
+    font-size: 14px;                      /* Tamaño legible */
+}
+.cautiverio{
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 30px;
+    box-shadow: 12px 12px 12px #00000083;
+}
+.cautiverio h2{
+      grid-column: 1 / -1; /*Lo ubica en todas las preguntas.*/ 
+}
+.noche{ 
+    height:40px;
+    width:40px;
+    margin-left: 90%;
+    margin-top: 15px;
+}
+.noche img{
+    height: 30px;
+    width: 30px;
+    margin: 0 auto;
+}
+
+/*Modo nocturno en el form*/
+#contacto {
+    background-color: #ce5bc883;
+    color: #000;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 450px;
+}
+
+/* Modo nocturno SOLO para contacto */
+#contacto.modo-noche {
+    background-color: #2b2b2be1;
+    color: #e0e0e0;
+}
+#contacto.modo-noche h2{
+    color: #ce5bc883;
+}
+#contacto.modo-noche label{
+    color: #ffffff;
+    text-align: center;
+}
+/* Inputs en modo noche */
+#contacto.modo-noche input {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+#contacto.modo-noche input::placeholder {
+    color: #aaa;
+}
+
+/* Botón enviar */
+#contacto.modo-noche form button {
+    background-color: #333;
+    color: #fff;
+}
+
+/*Para celukos*/
+/* Versión para pantallas pequeñas */
+@media (max-width: 400px) {
+
+    /* Header centrado */
+    header {
+        position: relative;
+        text-align: center;
+        width: 100vh;
+
+    }
+
+    ul{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+
+    /* Logo centrado */
+    header img {
+        width: 70px;
+        height: 70px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-top: 5px;
+    }
+
+    /* Menú vertical */
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .navbar li a {
+        width: 90%;
+        text-align: center;
+        padding: 10px;
+    }
+
+
+    .navbar li a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Secciones ocupan casi todo el ancho */
+    section {
+        width: 95%;
+        padding: 15px;
+    }
+
+    /* Proyectos en UNA columna */
+    .proyectos {
+        width: 95%;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Cards se adaptan al ancho */
+    .proyecto-card {
+        width: 90%;
+        margin: auto;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .proyecto-card img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    /* Galerías en una sola columna */
+    .galeria-mascotas,
+    .cautiverio {
+        grid-template-columns: 1fr;
+    }
+
+    /* Texto más cómodo para leer */
+    p, label {
+        font-size: 16px;
+    }
+}
+/*Para tablets*/
+@media (max-width: 800px){
+    header{
+        width: 100%;
+        height: 150px;
+        gap: 10px;
+        position: relative;
+    }
+    ul{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;   
+    }
+    .proyectos{
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 0 ;
+        gap: 6px;
+    }
+    .proyecto-card{
+        margin: 0 auto  ;
+        width: 300px;
+        height: 300px;
+    }
+    .proyecto-card img{
+    width: 250px;
+    height: 150px;        
+    }
+}
